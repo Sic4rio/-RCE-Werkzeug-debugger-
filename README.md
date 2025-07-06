@@ -42,7 +42,7 @@ This script (`werkzeug_pwn.py`) provides a clean, reliable, and user-friendly co
 
 1.  **Clone the repository:**
     ```bash
-    git clone <your-repo-url>
+    git clone https://github.com/Sic4rio/RCE-Werkzeug-debugger
     cd <your-repo-directory>
     ```
 
