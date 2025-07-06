@@ -2,7 +2,6 @@
 
 This repository contains an advanced Python 3 script to exploit a Remote Code Execution (RCE) vulnerability in the Werkzeug debugger (GHSA-2g68-c3qc-8985). The script automates the process of finding the debugger's `SECRET` PIN and executing arbitrary commands on the target server.
 
-![Script Demo Banner](https://raw.githubusercontent.com/gemini/asset-repo/main/werkzeug-pwner-banner.png)
 
 ---
 
