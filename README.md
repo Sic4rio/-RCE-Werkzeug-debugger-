@@ -22,7 +22,7 @@ This tool exploits a vulnerability in Werkzeug that allows for remote code execu
 
 ## Tool Description
 
-This script (`werkzeug_pwn.py`) provides a clean, reliable, and user-friendly command-line interface to perform the exploit. It automates the two key steps of the attack:
+This script (`exploit.py`) provides a clean, reliable, and user-friendly command-line interface to perform the exploit. It automates the two key steps of the attack:
 
 1.  **SECRET Discovery:** It scrapes the target's Werkzeug traceback page (e.g., `/console`) to automatically find the `SECRET` PIN required to access the debugger console.
 2.  **Command Execution:** It uses the discovered `SECRET` to send a formatted payload to the debugger, executing the user-specified system command and returning the cleaned output.
@@ -54,7 +54,7 @@ This script (`werkzeug_pwn.py`) provides a clean, reliable, and user-friendly co
 
 3.  **Make the script executable (optional):**
     ```bash
-    chmod +x werkzeug_pwn.py
+    chmod +x exploit.py
     ```
 
 ---
@@ -74,7 +74,7 @@ This is the most common use case. You provide the path that triggers the Werkzeu
 **Example:**
 
 ```bash
-./werkzeug_pwn.py http://VULN-WEBSITE.com "id" --exploit-path /console
+./exploit.py http://VULN-WEBSITE.com "id" --exploit-path /console
 ```
 
 ### Scenario 2: Provide a Known SECRET and Execute Command
@@ -82,13 +82,13 @@ This is the most common use case. You provide the path that triggers the Werkzeu
 If you have already discovered the `SECRET` PIN, you can provide it directly to skip the scraping step.
 
 ```bash
-./werkzeug_pwn.py <TARGET_URL> "<COMMAND>" --secret <KNOWN_SECRET>
+./exploit.py <TARGET_URL> "<COMMAND>" --secret <KNOWN_SECRET>
 ```
 
 **Example:**
 
 ```bash
-./werkzeug_pwn.py http://VULN-WEBSITE.com "ls -la /" --secret M1hM1fnGaPJcYnDo5i5u
+./exploit.py http://VULN-WEBSITE.com "ls -la /" --secret M1hM1fnGaPJcYnDo5i5u
 ```
 
 ---
